@@ -386,6 +386,8 @@ x.hello()
 # 
 # Finally, the derived class extends the functionality of the base class, by defining a new true_name() method.
 
+
+
 # ## Special Methods
 # 
 # Finally lets go over special methods. Let's imagine you wanted to check the length of a list, that is easy, you just call len() on that object. But what is the length of an Agent? Let's see what happens:
@@ -410,36 +412,36 @@ x.hello()
 
 
 
-# class Book():
+class Book():
     
-#     def __init__(self, title, author, pages):
-#         print("A book is created")
-#         self.title = title
-#         self.author = author
-#         self.pages = pages
+    def __init__(self, title, author, pages):
+        print("A book is created")
+        self.title = title
+        self.author = author
+        self.pages = pages
 
-#     def __str__(self):
-#         return "Title: {} , author:{}, pages: {}.".format(self.title, self.author, self.pages)
+    def __str__(self):
+        return "Title: {} , author:{}, pages: {}.".format(self.title, self.author, self.pages)
 
-#     def __len__(self):
-#         return self.pages
+    def __len__(self):
+        return self.pages
 
-#     def __del__(self):
-#         print("A book is destroyed")
+    def __del__(self):
+        print("A book is destroyed")
 
 
 # # In[44]:
 
 
-# book = Book("Python Rocks!", "Jose Portilla", 159)
+book = Book("Python Rocks!", "Jose Portilla", 159)
 
-# #Special Methods
-# print(book)
-# print(len(book))
-# del book
+#Special Methods
+print(book)
+print(len(book))
+del book
 
 
-#     The __init__(), __str__(), __len__() and the __del__() methods.
+#    The __init__(), __str__(), __len__() and the __del__() methods.
 # These special methods are defined by their use of underscores. They allow us to use Python specific functions on objects created through our class.
-# 
+
  
